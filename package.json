@@ -1,0 +1,25 @@
+{
+  "name": "virgool-tailwind",
+  "version": "1.0.0",
+  "description": "Redesign 6 pages of virgool with Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "postcss app/css/style.css -o dist/css/style.css -w",
+    "minify": "npx tailwindcss -o dist/css/style.min.css --minify",
+    "content": "npx tailwindcss --content dist/assets/css/style.c.css"
+  },
+  "keywords": [
+    "TailwindCSS",
+    "html5",
+    "css3",
+    "responsive",
+    "js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.23"
+  }
+}

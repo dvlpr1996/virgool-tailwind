@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Redesign 6 pages of virgool with Tailwind CSS",
   "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvlpr1996/virgool-tailwind"
+  },
   "scripts": {
     "dev": "postcss app/css/style.css -o dist/css/style.css -w",
     "minify": "npx tailwindcss -o dist/css/style.min.css --minify",

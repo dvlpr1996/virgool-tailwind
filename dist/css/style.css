@@ -522,6 +522,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
+.my-10{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .ml-4{
   margin-left: 1rem;
 }
@@ -581,6 +585,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-40{
   margin-bottom: 10rem;
+}
+.mt-11{
+  margin-top: 2.75rem;
 }
 .block{
   display: block;
@@ -1022,6 +1029,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-8{
   line-height: 2rem;
 }
+.tracking-\[0\.75rem\]{
+  letter-spacing: 0.75rem;
+}
 .text-\[\#8E8E8E\]{
   --tw-text-opacity: 1;
   color: rgb(142 142 142 / var(--tw-text-opacity));
@@ -1216,6 +1226,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-\[770px\]{
     width: 770px;
+  }
+
+  .lg\:w-\[710px\]{
+    width: 710px;
   }
 
   .lg\:gap-7{

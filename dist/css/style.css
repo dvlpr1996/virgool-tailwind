@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css");
 
 /*
@@ -461,6 +462,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-14{
   top: 3.5rem;
 }
+.left-0{
+  left: 0px;
+}
+.right-0{
+  right: 0px;
+}
+.right-9{
+  right: 2.25rem;
+}
 .z-10{
   z-index: 10;
 }
@@ -509,6 +519,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.my-9{
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
 }
 .my-7{
   margin-top: 1.75rem;
@@ -631,8 +649,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-12{
   height: 3rem;
 }
-.h-\[300px\]{
-  height: 300px;
+.h-\[350px\]{
+  height: 350px;
 }
 .h-52{
   height: 13rem;
@@ -663,9 +681,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-12{
   width: 3rem;
-}
-.w-\[55\%\]{
-  width: 55%;
 }
 .w-3\/5{
   width: 60%;
@@ -776,6 +791,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .space-x-reverse > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 1;
 }
+.overflow-auto{
+  overflow: auto;
+}
 .overflow-hidden{
   overflow: hidden;
 }
@@ -805,6 +823,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .border{
   border-width: 1px;
+}
+.border-0{
+  border-width: 0px;
 }
 .border-2{
   border-width: 2px;
@@ -912,6 +933,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-3{
   padding: 0.75rem;
 }
+.p-2{
+  padding: 0.5rem;
+}
 .px-\[25px\]{
   padding-left: 25px;
   padding-right: 25px;
@@ -953,9 +977,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-28{
   padding-top: 7rem;
-}
-.pr-8{
-  padding-right: 2rem;
 }
 .pb-4{
   padding-bottom: 1rem;
@@ -1148,47 +1169,92 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.outline-0{
+  outline-width: 0px;
+}
+
+input::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+ }
+
 .hover\:border-\[\#101010\]:hover{
   --tw-border-opacity: 1;
   border-color: rgb(16 16 16 / var(--tw-border-opacity));
 }
+
 .hover\:bg-\[\#0a4d77\]:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(10 77 119 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-\[\#6e6e6e\]:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(110 110 110 / var(--tw-bg-opacity));
 }
+
 .hover\:text-\[\#eaeaea\]:hover{
   --tw-text-opacity: 1;
   color: rgb(234 234 234 / var(--tw-text-opacity));
 }
+
 .hover\:text-\[\#e2264d\]:hover{
   --tw-text-opacity: 1;
   color: rgb(226 38 77 / var(--tw-text-opacity));
 }
+
 .hover\:text-\[\#ffffffD6\]:hover{
   color: #ffffffD6;
 }
+
 .hover\:text-\[\#101010\]:hover{
   --tw-text-opacity: 1;
   color: rgb(16 16 16 / var(--tw-text-opacity));
 }
+
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+.focus-visible\:outline-hidden:focus-visible{
+  outline-style: hidden;
+}
+
+.focus-visible\:outline-0:focus-visible{
+  outline-width: 0px;
+}
+
 @media (min-width: 640px){
 
   .sm\:mb-0{
     margin-bottom: 0px;
   }
 
+  .sm\:mt-\[unset\]{
+    margin-top: unset;
+  }
+
+  .sm\:block{
+    display: block;
+  }
+
+  .sm\:w-\[55\%\]{
+    width: 55%;
+  }
+
   .sm\:w-4\/5{
     width: 80%;
   }
+
+  .sm\:pr-8{
+    padding-right: 2rem;
+  }
+
+  .sm\:text-right{
+    text-align: right;
+  }
 }
+
 @media (min-width: 768px){
 
   .md\:mx-auto{
@@ -1223,7 +1289,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:justify-between{
     justify-content: space-between;
   }
+
+  .md\:p-4{
+    padding: 1rem;
+  }
 }
+
 @media (min-width: 1024px){
 
   .lg\:mx-auto{
@@ -1262,6 +1333,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 0px;
   }
 }
+
 @media (min-width: 1280px){
 
   .xl\:fixed{

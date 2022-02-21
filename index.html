@@ -15,6 +15,7 @@
 	<meta name="msapplication-navbutton-color" content="#107ABE">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#107ABE">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="dist/css/style.css">
 	<!-- [if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -23,27 +24,36 @@
 
 <body class="bg-[#F5F5F5] font-normal font-['vazir'] text-base">
 
-	<div class="w-full bg-white p-8 text-[13.3333px]">
-		<div class="flex flex-row justify-between items-center lg:w-[960px] lg:mx-auto">
+	<div class="w-full bg-white p-8 text-[13.3333px] relative">
 
+		<div class="flex flex-row justify-between items-center lg:w-[960px] lg:mx-auto">
 			<div class="flex flex-row items-center gap-3">
-			<img src="dist/img/logo.png" alt="virgool-logo">
+				<img src="dist/img/logo.png" alt="virgool-logo">
 				<p>ویرگول چیست؟</p>
 			</div>
 
 			<div class="space-x-4">
-				<i class="fas fa-search text-[#8E8E8E] text-lg ml-4 align-middle"></i>
+				<i class="fas fa-search text-[#8E8E8E] text-lg ml-4 align-middle cursor-pointer" id="search-btn"></i>
 				<a href="#" class="text-[#107ABE]">ورود</a>
 				<a href="#"
 					class="inline-block px-[25px] py-[5px] align-middle select-none border-none rounded-[5px] text-[#ffffffD6] bg-[#107ABE]">ثبت
 					نام</a>
 			</div>
-
 		</div>
+
+		<div class="flex justify-between items-center w-full lg:w-[960px] absolute top-0 right-0 left-0
+		     lg:mx-auto bg-white p-8 animate__animated animate__backInDown" id="search-bar">
+			<form class="w-full">
+				<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
+				 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
+			</form>
+			<span class="text-[#323232] cursor-pointer" id="close-btn">X</span>
+		</div>
+
 	</div>
 
-	<div class="w-full text-[#ffffffA3] bg-[#107ABE] text-[12.8px] p-4 sticky top-0 z-10">
-		<nav class="flex flex-row items-center gap-4 lg:w-[960px] lg:mx-auto">
+	<div class="w-full text-[#ffffffA3] bg-[#107ABE] text-[12.8px] p-2 md:p-4 sticky top-0 z-10 overflow-auto">
+		<nav class="flex flex-row items-center lg:w-[960px] lg:mx-auto gap-5">
 			<a href="#" class="text-[#ffffffD6]">جدیدترین پست‌ ها</a>
 			<a href="#" class="text-[#ffffffD6]">پست‌ های دوستان</a>
 			<a href="#" class="hover:text-[#ffffffD6]">کسب و کار</a>
@@ -128,9 +138,9 @@
 		</div>
 	</div>
 
-	<div class="lg:w-[960px] lg:mx-auto lg:px-0 mt-14 bg-[#bfe8ff] h-[300px]">
+	<div class="lg:w-[960px] mx-4 lg:mx-auto lg:px-0 mt-14 bg-[#bfe8ff] h-auto">
 		<div class="flex flex-row justify-between items-center">
-			<div class="w-[55%] pr-8">
+			<div class="w-full sm:w-[55%] text-center sm:text-right my-9 sm:mt-[unset] px-4 sm:pr-8">
 				<h3 class="text-[#323232] text-2xl font-semibold">به ویرگول، دنیای کلمات خوش آمدید. 👋</h3>
 				<p class="text-[#5b5b5b] text-sm font-black leading-10 my-7">
 					ویرگول بستری برای خواندن، گفتگو درباره‌ی موضوعات مورد علاقه و به اشتراک‌گذاری ایده‌های اصیل و عمیق در زندگی
@@ -144,8 +154,8 @@
 					py-2 px-4 rounded-[4px] border text-white bg-[#107ABE] hover:bg-[#0a4d77]">شروع به کار
 				</a>
 			</div>
-			<div>
-				<img src="dist/img/typewriter.png" class="w-full h-[300px]" alt="...">
+			<div class="hidden sm:block">
+				<img src="dist/img/typewriter.png" class="w-full h-[350px]" alt="...">
 			</div>
 		</div>
 	</div>
@@ -403,6 +413,9 @@
 		</div>
 
 	</div>
+
+	<script src="dist/js/jquery.min.js"></script>
+	<script src="dist/js/script.js"></script>
 </body>
 
 </html>

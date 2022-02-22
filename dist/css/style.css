@@ -450,26 +450,29 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-0{
   top: 0px;
 }
+.right-0{
+  right: 0px;
+}
+.left-0{
+  left: 0px;
+}
 .right-7{
   right: 1.75rem;
 }
 .bottom-8{
   bottom: 2rem;
 }
+.top-\[70px\]{
+  top: 70px;
+}
+.-right-\[70px\]{
+  right: -70px;
+}
 .top-20{
   top: 5rem;
 }
 .top-14{
   top: 3.5rem;
-}
-.left-0{
-  left: 0px;
-}
-.right-0{
-  right: 0px;
-}
-.right-9{
-  right: 2.25rem;
 }
 .z-10{
   z-index: 10;
@@ -652,6 +655,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[350px\]{
   height: 350px;
 }
+.h-24{
+  height: 6rem;
+}
 .h-52{
   height: 13rem;
 }
@@ -681,6 +687,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-12{
   width: 3rem;
+}
+.w-96{
+  width: 24rem;
+}
+.w-3\/4{
+  width: 75%;
+}
+.w-24{
+  width: 6rem;
 }
 .w-3\/5{
   width: 60%;
@@ -716,12 +731,6 @@ Ensure the default browser behavior of the `hidden` attribute.
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-.grid-cols-5{
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-.grid-rows-2{
-  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 .flex-row{
   flex-direction: row;
@@ -1126,6 +1135,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(91 91 91 / var(--tw-text-opacity));
 }
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .text-\[\#363636\]{
   --tw-text-opacity: 1;
   color: rgb(54 54 54 / var(--tw-text-opacity));
@@ -1177,6 +1190,22 @@ input::-webkit-search-cancel-button {
 	-webkit-appearance: none;
  }
 
+.before::before {
+	position: absolute;
+  content: "";
+  right: calc(50% - 180px);
+  top: -10px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #ddd transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hover\:cursor-pointer:hover{
+  cursor: pointer;
+}
+
 .hover\:border-\[\#101010\]:hover{
   --tw-border-opacity: 1;
   border-color: rgb(16 16 16 / var(--tw-border-opacity));
@@ -1224,6 +1253,10 @@ input::-webkit-search-cancel-button {
   outline-width: 0px;
 }
 
+.peer:hover ~ .peer-hover\:block{
+  display: block;
+}
+
 @media (min-width: 640px){
 
   .sm\:mb-0{
@@ -1238,12 +1271,34 @@ input::-webkit-search-cancel-button {
     display: block;
   }
 
+  .sm\:grid{
+    display: grid;
+  }
+
   .sm\:w-\[55\%\]{
     width: 55%;
   }
 
   .sm\:w-4\/5{
     width: 80%;
+  }
+
+  .sm\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .sm\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:gap-2{
+    gap: 0.5rem;
+  }
+
+  .sm\:space-y-\[unset\] > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(unset * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(unset * var(--tw-space-y-reverse));
   }
 
   .sm\:pr-8{
@@ -1264,6 +1319,10 @@ input::-webkit-search-cancel-button {
 
   .md\:block{
     display: block;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:w-\[760px\]{
@@ -1292,6 +1351,10 @@ input::-webkit-search-cancel-button {
 
   .md\:p-4{
     padding: 1rem;
+  }
+
+  .peer:hover ~ .md\:peer-hover\:block{
+    display: block;
   }
 }
 

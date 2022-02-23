@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="language" content="fa">
 	<meta name="robots" content="index, follow">
-	<meta name="designer" content="nima jahan bakhshian">
-	<meta name="subject" content="redesign virgool.io web site by using tailwindcss">
+	<meta name="designer" content="nima jahan bakhshian / https://github.com/dvlpr1996">
+	<meta name="subject" content="redesign virgool.io web site with tailwindcss">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,6 +15,7 @@
 	<meta name="msapplication-navbutton-color" content="#107ABE">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#107ABE">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="dist/css/style.css">
 	<!-- [if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -25,16 +26,17 @@
 
 	<div class="bg-[#FAFAFA] border-2 border-b-[#cacaca]">
 
-		<div class="w-full p-8 text-[13.3333px]">
-			<div class="flex flex-row justify-between items-center lg:w-[960px] lg:mx-auto">
+		<div class="w-full px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
 
-				<div class="flex flex-row items-center gap-3">
-					<img src="dist/img/logo.png" alt="virgool-logo">
+			<div class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto">
+
+				<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
+					<img src="dist/img/logo.png" alt="virgool-logo" loading="lazy">
 					<p>ویرگول چیست؟</p>
 				</div>
 
-				<div class="space-x-4">
-					<i class="fas fa-search text-[#8E8E8E] text-lg ml-4 align-middle"></i>
+				<div class="space-x-4 space-x-reverse mx-auto xs:mx-[initial]">
+					<i class="fas fa-search text-[#8E8E8E] text-lg ml-4 align-middle cursor-pointer" id="search-btn"></i>
 					<a href="#" class="text-[#107ABE]">ورود</a>
 					<a href="#"
 						class="inline-block px-[25px] py-[5px] align-middle select-none border-none rounded-[5px] text-[#ffffffD6] bg-[#107ABE]">ثبت
@@ -42,6 +44,16 @@
 				</div>
 
 			</div>
+
+			<div class="flex justify-between items-center w-full lg:w-[960px] absolute top-0 right-0 left-0
+					 lg:mx-auto bg-white p-8 animate__animated animate__backInDown" id="search-bar">
+				<form class="w-full">
+					<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
+					 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
+				</form>
+				<span class="text-[#323232] cursor-pointer" id="close-btn">X</span>
+			</div>
+
 		</div>
 
 		<div class="text-center mx-auto mt-10">
@@ -84,24 +96,27 @@
 		</div>
 
 		<div class="mt-6 text-center">
-			<a href="writer.html" class="mx-3 underline decoration-[#3a3a3a] underline-offset-8 decoration-solid decoration-2">پست
+			<a href="writer.html"
+				class="mx-3 underline decoration-[#3a3a3a] underline-offset-8 decoration-solid decoration-2">پست
 				ها</a>
 			<a href="publications.html" class="mx-3">انتشارات</a>
 		</div>
 
 	</div>
 
-	<div class="mt-20 px-4 bg-white w-full lg:w-[750px] lg:mx-auto mb-40">
+	<div class="mt-20 px-4 bg-white w-full md:w-[750px] md:mx-auto mb-40">
 
 		<article class="my-10 border-b-[#e1e1e1] border-b-2 pb-10">
-			<div class="flex justify-between">
+			<div class="flex flex-col sm:flex-row justify-center xs:justify-between gap-3 md:gap-[initial]">
 
 				<div class="flex-auto space-y-3">
 
 					<div class="space-y-3">
-						<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
-						</h2>
-						<p class="text-sm text-[#6e6e6e] font-extralight">
+						<a href="blog-post.html">
+							<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
+							</h2>
+						</a>
+						<p class="text-sm text-[#6e6e6e] font-extralight overflow-hidden whitespace-nowrap overflow-ellipsis w-3/4">
 							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
 						</p>
 					</div>
@@ -121,21 +136,23 @@
 				</div>
 
 				<div>
-					<img src="dist/img/bg-1.png" class="w-40 h-32 object-cover" alt="...">
+					<img src="dist/img/bg-1.png" class="w-full sm:w-40 h-48 sm:h-32 object-cover" alt="..." loading="lazy">
 				</div>
 
 			</div>
 		</article>
 
 		<article class="my-10 border-b-[#e1e1e1] border-b-2 pb-10">
-			<div class="flex justify-between">
+			<div class="flex flex-col sm:flex-row justify-center xs:justify-between gap-3 md:gap-[initial]">
 
 				<div class="flex-auto space-y-3">
 
 					<div class="space-y-3">
-						<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
-						</h2>
-						<p class="text-sm text-[#6e6e6e] font-extralight">
+						<a href="blog-post.html">
+							<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
+							</h2>
+						</a>
+						<p class="text-sm text-[#6e6e6e] font-extraligh overflow-hidden whitespace-nowrap overflow-ellipsis w-2/3">
 							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
 						</p>
 					</div>
@@ -155,21 +172,23 @@
 				</div>
 
 				<div>
-					<img src="dist/img/bg-4.jpg" class="w-40 h-32 object-cover" alt="...">
+					<img src="dist/img/bg-4.jpg" class="w-full sm:w-40 h-48 sm:h-32 object-cover" alt="..." loading="lazy">
 				</div>
 
 			</div>
 		</article>
 
 		<article class="my-10 border-b-[#e1e1e1] border-b-2 pb-10">
-			<div class="flex justify-between">
+			<div class="flex flex-col sm:flex-row justify-center xs:justify-between gap-3 md:gap-[initial]">
 
 				<div class="flex-auto space-y-3">
 
 					<div class="space-y-3">
-						<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
-						</h2>
-						<p class="text-sm text-[#6e6e6e] font-extralight">
+						<a href="blog-post.html">
+							<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
+							</h2>
+						</a>
+						<p class="text-sm text-[#6e6e6e] font-extralig overflow-hidden whitespace-nowrap overflow-ellipsis w-2/3">
 							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
 						</p>
 					</div>
@@ -189,21 +208,23 @@
 				</div>
 
 				<div>
-					<img src="dist/img/bg-2.jpg" class="w-40 h-32 object-cover" alt="...">
+					<img src="dist/img/bg-2.jpg" class="w-full sm:w-40 h-48 sm:h-32 object-cover" alt="..." loading="lazy">
 				</div>
 
 			</div>
 		</article>
 
 		<article class="my-10">
-			<div class="flex justify-between">
+			<div class="flex flex-col sm:flex-row justify-center xs:justify-between gap-3 md:gap-[initial]">
 
 				<div class="flex-auto space-y-3">
 
 					<div class="space-y-3">
-						<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
-						</h2>
-						<p class="text-sm text-[#6e6e6e] font-extralight">
+						<a href="blog-post.html">
+							<h2 class="font-bold text-lg overflow-hidden text-ellipsis text-[#323232]">عنوان مقالات مربوط به نویسنده
+							</h2>
+						</a>
+						<p class="text-sm text-[#6e6e6e] font-extrali overflow-hidden whitespace-nowrap overflow-ellipsis w-2/3">
 							لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
 						</p>
 					</div>
@@ -223,7 +244,7 @@
 				</div>
 
 				<div>
-					<img src="dist/img/bg-3.jpg" class="w-40 h-32 object-cover" alt="...">
+					<img src="dist/img/bg-3.jpg" class="w-full sm:w-40 h-48 sm:h-32 object-cover" alt="..." loading="lazy">
 				</div>
 
 			</div>
@@ -231,6 +252,8 @@
 
 	</div>
 
+	<script src="dist/js/jquery.min.js"></script>
+	<script src="dist/js/script.js"></script>
 </body>
 
 </html>

@@ -735,6 +735,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex-row{
   flex-direction: row;
 }
+.flex-col{
+  flex-direction: column;
+}
 .items-center{
   align-items: center;
 }
@@ -977,6 +980,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1188,7 +1199,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 input::-webkit-search-cancel-button {
 	-webkit-appearance: none;
- }
+}
+
+.img-hover::before {
+  background-color: rgba(0,0,0,.3);
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
 
 .before::before {
 	position: absolute;
@@ -1253,8 +1274,28 @@ input::-webkit-search-cancel-button {
   outline-width: 0px;
 }
 
-.peer:hover ~ .peer-hover\:block{
-  display: block;
+@media (min-width: 360px){
+
+  .xs\:mx-\[initial\]{
+    margin-left: initial;
+    margin-right: initial;
+  }
+
+  .xs\:flex-row{
+    flex-direction: row;
+  }
+
+  .xs\:items-center{
+    align-items: center;
+  }
+
+  .xs\:justify-between{
+    justify-content: space-between;
+  }
+
+  .xs\:gap-0{
+    gap: 0px;
+  }
 }
 
 @media (min-width: 640px){
@@ -1321,10 +1362,6 @@ input::-webkit-search-cancel-button {
     display: block;
   }
 
-  .md\:hidden{
-    display: none;
-  }
-
   .md\:w-\[760px\]{
     width: 760px;
   }
@@ -1351,6 +1388,16 @@ input::-webkit-search-cancel-button {
 
   .md\:p-4{
     padding: 1rem;
+  }
+
+  .md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:py-8{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .peer:hover ~ .md\:peer-hover\:block{

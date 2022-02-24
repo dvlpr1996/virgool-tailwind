@@ -1317,6 +1317,19 @@ input::-webkit-search-cancel-button {
     margin-right: initial;
   }
 
+  .xs\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .xs\:w-\[710px\]{
+    width: 710px;
+  }
+
+  .xs\:w-\[600px\]{
+    width: 600px;
+  }
+
   .xs\:flex-row{
     flex-direction: row;
   }
@@ -1335,6 +1348,11 @@ input::-webkit-search-cancel-button {
 }
 
 @media (min-width: 640px){
+
+  .sm\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .sm\:mb-0{
     margin-bottom: 0px;
@@ -1366,6 +1384,30 @@ input::-webkit-search-cancel-button {
 
   .sm\:w-40{
     width: 10rem;
+  }
+
+  .sm\:w-\[710px\]{
+    width: 710px;
+  }
+
+  .sm\:w-\[\]{
+    width: ;
+  }
+
+  .sm\:w-\[500\]{
+    width: 500;
+  }
+
+  .sm\:w-\[500px\]{
+    width: 500px;
+  }
+
+  .sm\:w-\[600px\]{
+    width: 600px;
+  }
+
+  .sm\:w-\[550px\]{
+    width: 550px;
   }
 
   .sm\:grid-cols-5{
@@ -1456,6 +1498,10 @@ input::-webkit-search-cancel-button {
 
   .md\:w-40{
     width: 10rem;
+  }
+
+  .md\:w-\[710px\]{
+    width: 710px;
   }
 
   .md\:grid-cols-3{

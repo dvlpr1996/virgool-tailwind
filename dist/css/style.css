@@ -625,6 +625,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mt-9{
   margin-top: -2.25rem;
 }
+.mt-16{
+  margin-top: 4rem;
+}
+.mt-9{
+  margin-top: 2.25rem;
+}
 .block{
   display: block;
 }
@@ -777,6 +783,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-5{
   gap: 1.25rem;
 }
+.gap-9{
+  gap: 2.25rem;
+}
 .space-x-4 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -900,6 +909,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-bottom-color: rgb(225 225 225 / var(--tw-border-opacity));
 }
+.border-b-\[\#645e5e\]{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(100 94 94 / var(--tw-border-opacity));
+}
+.border-b-\[\#684545\]{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(104 69 69 / var(--tw-border-opacity));
+}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1015,6 +1032,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pb-10{
   padding-bottom: 2.5rem;
+}
+.pb-6{
+  padding-bottom: 1.5rem;
 }
 .text-center{
   text-align: center;
@@ -1293,6 +1313,10 @@ input::-webkit-search-cancel-button {
     margin-right: initial;
   }
 
+  .xs\:mt-16{
+    margin-top: 4rem;
+  }
+
   .xs\:w-2\/3{
     width: 66.666667%;
   }
@@ -1315,6 +1339,10 @@ input::-webkit-search-cancel-button {
 
   .xs\:gap-0{
     gap: 0px;
+  }
+
+  .xs\:pb-3{
+    padding-bottom: 0.75rem;
   }
 }
 
@@ -1401,6 +1429,10 @@ input::-webkit-search-cancel-button {
     gap: 0.5rem;
   }
 
+  .sm\:gap-\[initial\]{
+    gap: initial;
+  }
+
   .sm\:space-y-\[unset\] > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(unset * calc(1 - var(--tw-space-y-reverse)));
@@ -1477,6 +1509,10 @@ input::-webkit-search-cancel-button {
 
   .md\:w-4\/5{
     width: 80%;
+  }
+
+  .md\:w-\[770px\]{
+    width: 770px;
   }
 
   .md\:grid-cols-3{

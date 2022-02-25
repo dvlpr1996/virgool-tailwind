@@ -19,7 +19,11 @@
     "responsive",
     "js"
   ],
-  "author": "",
+  "author": {
+    "name": "Nima jahan bakhshian",
+    "email": "nimajahanbakhshian@gmail.com",
+    "url": "https://github.com/dvlpr1996/"
+  },
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.2",

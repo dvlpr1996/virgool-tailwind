@@ -759,6 +759,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .items-center{
   align-items: center;
 }
+.items-baseline{
+  align-items: baseline;
+}
 .justify-start{
   justify-content: flex-start;
 }
@@ -820,6 +823,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-9 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
 }
 .space-x-reverse > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 1;
@@ -1036,8 +1049,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-6{
   padding-bottom: 1.5rem;
 }
+.pt-10{
+  padding-top: 2.5rem;
+}
 .text-center{
   text-align: center;
+}
+.text-right{
+  text-align: right;
 }
 .align-baseline{
   vertical-align: baseline;
@@ -1325,6 +1344,10 @@ input::-webkit-search-cancel-button {
     width: 33.333333%;
   }
 
+  .xs\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .xs\:flex-row{
     flex-direction: row;
   }
@@ -1339,6 +1362,10 @@ input::-webkit-search-cancel-button {
 
   .xs\:gap-0{
     gap: 0px;
+  }
+
+  .xs\:gap-1{
+    gap: 0.25rem;
   }
 
   .xs\:pb-3{
@@ -1359,6 +1386,14 @@ input::-webkit-search-cancel-button {
 
   .sm\:mt-\[unset\]{
     margin-top: unset;
+  }
+
+  .sm\:mt-24{
+    margin-top: 6rem;
+  }
+
+  .sm\:mt-20{
+    margin-top: 5rem;
   }
 
   .sm\:block{
@@ -1413,6 +1448,10 @@ input::-webkit-search-cancel-button {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:grid-rows-2{
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
@@ -1423,6 +1462,10 @@ input::-webkit-search-cancel-button {
 
   .sm\:justify-start{
     justify-content: flex-start;
+  }
+
+  .sm\:justify-between{
+    justify-content: space-between;
   }
 
   .sm\:gap-2{
@@ -1439,8 +1482,18 @@ input::-webkit-search-cancel-button {
     margin-bottom: calc(unset * var(--tw-space-y-reverse));
   }
 
+  .sm\:space-y-1 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+  }
+
   .sm\:pr-8{
     padding-right: 2rem;
+  }
+
+  .sm\:pt-28{
+    padding-top: 7rem;
   }
 
   .sm\:text-right{
@@ -1519,6 +1572,10 @@ input::-webkit-search-cancel-button {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
@@ -1581,6 +1638,10 @@ input::-webkit-search-cancel-button {
 
   .lg\:w-\[770px\]{
     width: 770px;
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:gap-7{

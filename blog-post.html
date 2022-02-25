@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="language" content="fa">
 	<meta name="robots" content="index, follow">
-	<meta name="designer" content="nima jahan bakhshian">
-	<meta name="subject" content="redesign virgool.io web site by using tailwindcss">
+	<meta name="designer" content="nima jahan bakhshian / https://github.com/dvlpr1996">
+	<meta name="subject" content="redesign virgool.io web site with tailwindcss">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,6 +15,7 @@
 	<meta name="msapplication-navbutton-color" content="#107ABE">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#107ABE">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="dist/css/style.css">
 	<!-- [if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -23,16 +24,17 @@
 
 <body class="font-normal font-['vazir'] text-base">
 
-	<div class="w-full bg-white p-8 text-[13.3333px]">
-		<div class="flex flex-row justify-between items-center lg:w-[960px] lg:mx-auto">
+	<div class="w-full bg-white px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
 
-			<div class="flex flex-row items-center gap-3">
-				<img src="dist/img/logo.png" alt="virgool-logo">
+		<div class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto">
+
+			<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
+				<img src="dist/img/logo.png" alt="virgool-logo" loading="lazy">
 				<p>ویرگول چیست؟</p>
 			</div>
 
-			<div class="space-x-4">
-				<i class="fas fa-search text-[#8E8E8E] text-lg ml-4 align-middle"></i>
+			<div class="space-x-4 space-x-reverse mx-auto xs:mx-[initial]">
+				<i class="fas fa-search text-[#8E8E8E] text-lg ml-4 align-middle cursor-pointer" id="search-btn"></i>
 				<a href="#" class="text-[#107ABE]">ورود</a>
 				<a href="#"
 					class="inline-block px-[25px] py-[5px] align-middle select-none border-none rounded-[5px] text-[#ffffffD6] bg-[#107ABE]">ثبت
@@ -40,14 +42,24 @@
 			</div>
 
 		</div>
+
+		<div class="flex justify-between items-center w-full lg:w-[960px] absolute top-0 right-0 left-0
+		     lg:mx-auto bg-white p-8 animate__animated animate__backInDown" id="search-bar">
+			<form class="w-full">
+				<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
+				 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
+			</form>
+			<span class="text-[#323232] cursor-pointer" id="close-btn">X</span>
+		</div>
+
 	</div>
 
-	<div class="mt-20 px-4 bg-white w-full lg:w-[750px] lg:mx-auto">
+	<div class="mt-10 px-4 bg-white w-full md:w-[750px] md:mx-auto">
 
-		<div class="flex items-center justify-start gap-2">
-			<img src="dist/img/avatar-3.png" class="w-20 h-w-20 rounded-full object-cover" alt="writer-post-blog">
-			<div class="space-y-1">
-				<div class="flex gap-3 items-center">
+		<div class="flex items-center justify-start gap-5 sm:gap-2 flex-col xs:flex-row">
+			<img src="dist/img/avatar-3.png" class="w-20 h-w-20 rounded-full object-cover" alt="writer-post-blog" loading="lazy">
+			<div class="space-y-4 sm:space-y-1">
+				<div class="flex gap-3 items-center flex-col sm:flex-row">
 					<a href="writer.html" class="text-[#323232] font-bold text-xl">نام نویسنده</a>
 					<a href="#" class="bg-[#4b4b4b] text-white min-w-[7rem] rounded-full text-center text-[.75rem]
 							py-1 px-2">+ دنبال کنید</a>
@@ -56,40 +68,44 @@
 			</div>
 		</div>
 
-		<h1 class="text-[#4b4b4b] text-2xl font-bold mt-10 mb-4">عنوان مقاله</h1>
-		<figure class="my-4">
-			<img src="dist/img/bg-3.jpg" class="w-full h-auto" alt="...">
-			<figcaption class="text-center font-extralight my-3 leading-6 text-[#4b4b4b] block">توضیحی در مورد عکس بالا
-			</figcaption>
-		</figure>
-		<!-- link in matn #107abe -->
-		<p class="leading-10">
-			لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
-			روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
-			ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
-			طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
-			ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
-			وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
-			قرار گیرد.
-		</p>
+		<div>
+			<h1 class="text-[#4b4b4b] text-2xl font-bold mt-10 mb-4">عنوان مقاله</h1>
+			<figure class="my-4">
+				<img src="dist/img/bg-3.jpg" class="w-full h-auto" alt="..." loading="lazy">
+				<figcaption class="text-center font-extralight my-3 leading-6 text-[#4b4b4b] block">توضیحی در مورد عکس بالا
+				</figcaption>
+			</figure>
+			<!-- link in matn #107abe -->
+			<p class="leading-10">
+				لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+				روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+				بهبود
+				ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
+				طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+				ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+				وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+				قرار گیرد.
+			</p>
 
-		<figure class="my-4">
-			<img src="dist/img/bg-4.jpg" class="w-full h-auto" alt="...">
-			<figcaption class="text-center font-extralight my-3 leading-6 text-[#4b4b4b] block">توضیحی در مورد عکس بالا
-			</figcaption>
-		</figure>
+			<figure class="my-4">
+				<img src="dist/img/bg-4.jpg" class="w-full h-auto" alt="..." loading="lazy">
+				<figcaption class="text-center font-extralight my-3 leading-6 text-[#4b4b4b] block">توضیحی در مورد عکس بالا
+				</figcaption>
+			</figure>
 
-		<p class="leading-10">
-			لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
-			روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
-			ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
-			طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
-			ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
-			وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
-			قرار گیرد.
-		</p>
+			<p class="leading-10">
+				لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+				روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف
+				بهبود
+				ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می
+				طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+				ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد
+				وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+				قرار گیرد.
+			</p>
+		</div>
 
-		<div class="mt-24">
+		<div class="mt-10 sm:mt-24 text-center sm:text-right">
 			<ul>
 				<li class="inline-block whitespace-nowrap ml-2 mb-4 text-sm">
 					<a href="#" class="py-1 px-3 text-[#323232] bg-[#f5f5f5] hover:text-[#eaeaea]">تک مقاله</a>
@@ -106,7 +122,7 @@
 			</ul>
 		</div>
 
-		<div class="mt-7 flex items-center justify-between">
+		<div class="mt-7 flex flex-col gap-7 sm:flex-row items-center justify-center sm:justify-between">
 
 			<div class="flex items-center gap-7">
 
@@ -130,15 +146,17 @@
 
 			</div>
 
-			<div>
+			<div class="flex flex-col sm:flex-row items-center gap-4">
 
-				<a href="#" class="ml-2">
-					<i class="fab fa-telegram fa-lg text-[#8e8e8e]"></i>
-				</a>
+				<div>
+					<a href="#" class="ml-2">
+						<i class="fab fa-telegram fa-lg text-[#8e8e8e]"></i>
+					</a>
 
-				<a href="#" class="ml-2">
-					<i class="fab fa-twitter fa-lg text-[#8e8e8e]"></i>
-				</a>
+					<a href="#" class="ml-2">
+						<i class="fab fa-twitter fa-lg text-[#8e8e8e]"></i>
+					</a>
+				</div>
 
 				<a href="#" class="text-base text-[#6e6e6e] py-1 px-5 border border-[#6e6e6e] rounded-full">
 					https://vrgl.ir/abc
@@ -152,8 +170,8 @@
 		<hr class="border-b-4 border-dotted my-8">
 
 		<div>
-			<div class="flex items-center">
-				<img src="dist/img/avatar-3.png" class="w-14 h-14 rounded-lg" alt="...">
+			<div class="flex items-center flex-col xs:flex-row gap-3 xs:gap-1">
+				<img src="dist/img/avatar-3.png" class="w-14 h-14 rounded-lg" alt="..." loading="lazy">
 				<p class="text-[#323232] font-bold ml-4 mr-2 text-base">نام نویسنده</p>
 				<a href="#" class="text-[#107abe] py-1 px-3 text-xs rounded-md
 					border border-solid border-[#107abe] align-middle">
@@ -162,11 +180,11 @@
 			</div>
 		</div>
 
-		<!-- fix : sidebar -->
-		<!-- <div class="hidden w-52 xl:fixed xl:block left-5 space-y-3 top-[150px]">
-			<h2 class="font-bold text-sm text-[#323232]">Lorem, ipsum</h2>
+
+		<div class="hidden w-52 xl:fixed xl:block left-5 space-y-3 top-[150px]">
+			<h2 class="font-bold text-sm text-[#323232]">نام نویسنده</h2>
 			<p class="text-xs text-[#6e6e6e]">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, obcaecati.
+				ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
 			</p>
 			<a href="#" class="text-[#107abe] py-1 px-3 text-xs rounded-md
 						border border-solid border-[#107abe] align-middle inline-block">
@@ -178,35 +196,35 @@
 					<a href="#" class="inline-block">
 						<i class="fa-lg far fa-heart align-middle text-[#8e8e8e] hover:text-[#e2264d]"></i>
 					</a>
-					<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">52</a>
+					<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">21</a>
 				</div>
-	
+
 				<div>
 					<a href="#" class="inline-block">
 						<i class="far fa-comment-alt fa-lg align-middle text-[#8e8e8e]"></i>
 					</a>
-					<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">10</a>
+					<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">11</a>
 				</div>
-	
+
 				<a href="#" class="inline-block">
 					<i class="fa-lg align-middle text-[#8e8e8e] far fa-bookmark"></i>
 				</a>
-	
+
 			</div>
-		</div> -->
+		</div>
 
 	</div>
 
 	<div class="bg-[#F5F5F5] px-4 mt-20 pb-5">
 
-		<div class="mx-auto pt-28 px-3 w-full md:w-[760px] lg:w-[960px]">
+		<div class="mx-auto pt-10 sm:pt-28 px-3 w-full md:w-[760px] lg:w-[960px]">
 			<h5 class="mb-4 font-bold text-sm text-[#6e6e6e]">شاید از این نوشته‌ها هم خوشتان بیاید</h5>
 
-			<div class="grid md:grid-cols-3 gap-2">
+			<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
 
 				<div class="border border-gray-300 shadow-sm mb-3 sm:mb-0">
 
-					<img src="dist/img/bg-1.png" class="w-full h-40 object-cover" alt="...">
+					<img src="dist/img/bg-1.png" class="w-full h-40 object-cover" alt="..." loading="lazy">
 					<div class="px-4 py-2 space-y-3">
 						<p class="text-[#8e8e8e] text-sm">مطلبی دیگر از این نویسنده</p>
 						<p class="text-[#323232] text-base overflow-hidden leading-8">
@@ -217,7 +235,7 @@
 					<div class="flex justify-between items-center p-4">
 						<div class="flex items-center gap-2">
 							<div class="w-8 h-8">
-								<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="...">
+								<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="..." loading="lazy">
 							</div>
 							<div>
 								<p class="text-[#107abe] overflow-ellipsis text-[12.8px]">نام نویسنده</p>
@@ -229,7 +247,7 @@
 				</div>
 
 				<div class="border border-gray-300 shadow-sm mb-3 sm:mb-0">
-					<img src="dist/img/bg-2.jpg" class="w-full h-40 object-cover" alt="...">
+					<img src="dist/img/bg-2.jpg" class="w-full h-40 object-cover" alt="..." loading="lazy">
 					<div class="px-4 py-2 space-y-3">
 						<p class="text-[#8e8e8e] text-sm">مطلبی دیگر از این نویسنده</p>
 						<p class="text-[#323232] text-base overflow-hidden leading-8">
@@ -240,7 +258,7 @@
 					<div class="flex justify-between items-center p-4">
 						<div class="flex items-center gap-2">
 							<div class="w-8 h-8">
-								<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="...">
+								<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="..." loading="lazy">
 							</div>
 							<div>
 								<p class="text-[#107abe] overflow-ellipsis text-[12.8px]">نام نویسنده</p>
@@ -252,7 +270,7 @@
 				</div>
 
 				<div class="border border-gray-300 shadow-sm mb-3 sm:mb-0">
-					<img src="dist/img/bg-3.jpg " class="w-full h-40 object-cover" alt="...">
+					<img src="dist/img/bg-3.jpg " class="w-full h-40 object-cover" alt="..." loading="lazy">
 					<div class="px-4 py-2 space-y-3">
 						<p class="text-[#8e8e8e] text-sm">مطلبی دیگر از این نویسنده</p>
 						<p class="text-[#323232] text-base overflow-hidden leading-8">
@@ -263,7 +281,7 @@
 					<div class="flex justify-between items-center p-4">
 						<div class="flex items-center gap-2">
 							<div class="w-8 h-8">
-								<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="...">
+								<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="..." loading="lazy">
 							</div>
 							<div>
 								<p class="text-[#107abe] overflow-ellipsis text-[12.8px]">نام نویسنده</p>
@@ -282,14 +300,14 @@
 			<h6 class="text-[12.8px] text-[#6E6E6E]">پاسخ ها</h6>
 
 			<div class="flex items-center gap-4 bg-white p-3 text-gray-500">
-				<img src="dist/img/avatar.jpg" class="w-9 h-9 rounded-full" alt="">
+				<img src="dist/img/avatar.jpg" class="w-9 h-9 rounded-full" alt="" loading="lazy">
 				<p>نظر خود را درباره این پست بنویسید</p>
 			</div>
 
 			<div class="text-[12.8px] text-[#6E6E6E] bg-white space-y-3 p-3 my-4">
 				<div class="flex items-center gap-2">
 					<div class="w-8 h-8">
-						<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="...">
+						<img src="dist/img/avatar-3.png" class="w-full h-full rounded-full" alt="..." loading="lazy">
 					</div>
 					<div>
 						<p class="text-[#107abe] overflow-ellipsis text-[12.8px]">نام نویسنده</p>
@@ -315,7 +333,7 @@
 			<div class="text-[12.8px] text-[#6E6E6E] bg-white space-y-3 p-3 my-4">
 				<div class="flex items-center gap-2">
 					<div class="w-8 h-8">
-						<img src="dist/img/avatar-2.png" class="w-full h-full rounded-full" alt="...">
+						<img src="dist/img/avatar-2.png" class="w-full h-full rounded-full" alt="..." loading="lazy">
 					</div>
 					<div>
 						<p class="text-[#107abe] overflow-ellipsis text-[12.8px]">نام نویسنده</p>
@@ -341,7 +359,7 @@
 			<div class="text-[12.8px] text-[#6E6E6E] bg-white space-y-3 p-3 my-4">
 				<div class="flex items-center gap-2">
 					<div class="w-8 h-8">
-						<img src="dist/img/avatar-4.png" class="w-full h-full rounded-full" alt="...">
+						<img src="dist/img/avatar-4.png" class="w-full h-full rounded-full" alt="..." loading="lazy">
 					</div>
 					<div>
 						<p class="text-[#107abe] overflow-ellipsis text-[12.8px]">نام نویسنده</p>
@@ -367,7 +385,7 @@
 			<div class="text-[12.8px] text-[#6E6E6E] bg-white space-y-3 p-3 my-4">
 				<div class="flex items-center gap-2">
 					<div class="w-8 h-8">
-						<img src="dist/img/avatar-1.png" class="w-full h-full rounded-full" alt="...">
+						<img src="dist/img/avatar-1.png" class="w-full h-full rounded-full" alt="..." loading="lazy">
 					</div>
 					<div>
 						<p class="text-[#107abe] overflow-ellipsis text-[12.8px]">نام نویسنده</p>
@@ -394,6 +412,8 @@
 
 	</div>
 
+	<script src="dist/js/jquery.min.js"></script>
+	<script src="dist/js/script.js"></script>
 </body>
 
 </html>

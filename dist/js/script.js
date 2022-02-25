@@ -1,12 +1,23 @@
 $(document).ready(function () {
-	$("#search-bar").hide();
 
+	$("#search-bar").hide();
 	$("#search-btn").click(function () {
 		$("#search-bar").show();
 
 		$("#close-btn").click(function () {
 			$("#search-bar").hide();
 		});
-		
+
 	});
+
+	$('#sidebar').hide();
+	$(document).scroll(function () {
+		let y = $(this).scrollTop();
+		if (y > 150 && y < 1600) {
+			$('#sidebar').show();
+		} else {
+			$('#sidebar').hide();
+		}
+	});
+
 });

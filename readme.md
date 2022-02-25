@@ -1,6 +1,10 @@
 # virgool tailwind #
 
+<br>
+
 Redesign 6 pages of virgool website with TailwindCSS
+
+<br>
 
 #### Language And Tools : ####
 

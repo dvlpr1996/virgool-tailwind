@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+.img-hover::before {
+  background-color: rgba(0,0,0,.3);
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.before::before {
+	position: absolute;
+  content: "";
+  right: calc(50% - 180px);
+  top: -10px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #ddd transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}

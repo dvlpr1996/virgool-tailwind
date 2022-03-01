@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "postcss app/css/style.css -o dist/css/style.css -w",
     "minify": "npx tailwindcss -o dist/css/style.min.css --minify",
-    "content": "npx tailwindcss --content dist/assets/css/style.c.css"
+    "content": "npx tailwindcss --content dist/assets/css/style.c.css",
+    "cssnano": "npx postcss dist/css/style.css > dist/css/style.min.css"
   },
   "keywords": [
     "TailwindCSS",

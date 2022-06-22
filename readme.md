@@ -1,8 +1,8 @@
-# virgool tailwind #
+# Virgool Clone TailwindCss #
 
 <br>
 
-Redesign 6 pages of virgool website with TailwindCSS
+Redesign (clone) 6 pages of virgool website with TailwindCSS
 
 <br>
 

@@ -8,7 +8,7 @@
     "url": "https://github.com/dvlpr1996/virgool-tailwind"
   },
   "scripts": {
-    "dev": "postcss app/css/style.css -o dist/css/style.css -w",
+    "dev": "npx tailwindcss -i app/css/style.css -o dist/css/style.css -w",
     "minify": "npx tailwindcss -o dist/css/style.min.css --minify",
     "content": "npx tailwindcss --content dist/assets/css/style.c.css",
     "cssnano": "npx postcss dist/css/style.css > dist/css/style.min.css"
@@ -30,6 +30,7 @@
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.17",
     "postcss": "^8.4.7",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "tailwindcss-debug-screens": "^2.2.1"
   }
 }

@@ -14,94 +14,49 @@
 	<meta name="msapplication-navbutton-color" content="#107ABE">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#107ABE">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" href="dist/css/style.css">
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 	<!-- [if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif] -->
 </head>
 
-<body class="font-normal font-['vazir'] text-base">
+<body class="font-normal text-base">
 
-	<div class="bg-[#FAFAFA] border-2 border-b-[#cacaca]">
+	<!-- nav bar -->
+	<div class="w-full bg-white px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
+		<!-- top nav bar -->
+		<nav class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto">
 
-		<div class="w-full px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
-
-			<div class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto">
-	
-				<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
+			<!-- right nav items -->
+			<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
+				<a href="index.html">
 					<img src="dist/img/logo.png" alt="virgool-logo" loading="lazy">
-					<p>ویرگول چیست؟</p>
-				</div>
-	
-				<div class="space-x-4 mx-auto xs:mx-[initial]">
-					<i class="fas fa-search text-[#8E8E8E] text-lg ml-4 align-middle cursor-pointer" id="search-btn"></i>
-					<a href="#" class="text-[#107ABE]">ورود</a>
-					<a href="#"
-						class="inline-block px-[25px] py-[5px] align-middle select-none border-none rounded-[5px] text-[#ffffffD6] bg-[#107ABE]">ثبت
-						نام</a>
-				</div>
-	
-			</div>
-	
-			<div class="flex justify-between items-center w-full lg:w-[960px] absolute top-0 right-0 left-0
-					 lg:mx-auto bg-white p-8 animate__animated animate__backInDown" id="search-bar">
-				<form class="w-full">
-					<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
-					 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
-				</form>
-				<span class="text-[#323232] cursor-pointer" id="close-btn">X</span>
-			</div>
-	
-		</div>
-
-		<div class="text-center mx-auto mt-10">
-			<div>
-				<img src="dist/img/avatar-3.png" class="w-20 h-20 object-cover rounded-full align-middle
-						block mx-auto" alt="...">
-				<a href="#" class="text-[#323232] text-xl font-black">نام نویسنده</a>
-
-				<p class="text-[#4b4b4b] text-sm mt-2">
-					توضیحی در مورد نویسنده مقاله
-				</p>
-
-				<div class="mt-4 text-sm text-[#6e6e6e]">
-					<a href="#" class="mx-2">توسط <span class="text-[#4b4b4b] font-bold">۵۶</span> نفر دنبال میشود</a>
-					<a href="#" class="mx-2"><span class="text-[#4b4b4b] font-bold">۳۴</span> نفر را دنبال میکند </a>
-				</div>
-
-				<button class="bg-[#107abe] border-[#107ABE] text-white my-4
-			rounded-full cursor-pointer text-sm font-bold py-1 text-center px-4 w-2/3 max-w-[200px]">دنبال کنید</button>
-
-				<div>
-					<div class="inline-flex space-x-2">
-						<a href="#"
-							class="flex flex-row justify-center items-center w-8 h-8 text-center border rounded-full text-white bg-[#6e6e6e]">
-							<i class="fa fa-rss"></i>
-						</a>
-						<a href="#"
-							class="flex flex-row justify-center items-center w-8 h-8 text-center border rounded-full text-white bg-[#6e6e6e]">
-							<i class="fab fa-twitch"></i>
-						</a>
-						<a href="#"
-							class="flex flex-row justify-center items-center w-8 h-8 text-center border rounded-full text-white bg-[#6e6e6e]">
-							<i class="fab fa-twitter"></i>
-						</a>
-					</div>
-				</div>
-
+				</a>
+				<a href="index.html">ویرگول چیست</a>
 			</div>
 
-		</div>
+			<!-- left nav items -->
+			<div x-data class="space-x-4 mx-auto xs:mx-[initial]">
+				<i class="fas fa-search secondary-text text-lg ml-4 align-middle cursor-pointer" id="search-btn"></i>
+				<a href="#" @click="alert('Not Implemented Yet')" class="secondary-color">ورود</a>
+				<a href="#" @click="alert('Not Implemented Yet')" class="register-btn">ثبت نام</a>
+			</div>
+		</nav>
+		<!-- /top nav bar -->
 
-		<div class="mt-6 text-center">
-			<a href="writer.html" class="mx-3">پست
-				ها</a>
-			<a href="publications.html"
-				class="mx-3 underline decoration-[#3a3a3a] underline-offset-8 decoration-solid decoration-2">انتشارات</a>
+		<!-- search section -->
+		<div class="flex justify-between items-center w-full lg:w-[960px] absolute top-0 right-0 left-0
+		     lg:mx-auto bg-white p-8 animate__animated animate__backInDown" id="search-bar">
+			<form class="w-full">
+				<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
+				 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
+			</form>
+			<span class="text-[#323232] cursor-pointer" id="close-btn">X</span>
 		</div>
-
 	</div>
+	<!-- /nav bar -->
 
 	<div class="mt-9 xs:mt-16 px-4 bg-white w-full md:w-[770px] md:mx-auto mb-40">
 
@@ -173,6 +128,7 @@
 
 	<script src="dist/js/jquery.min.js"></script>
 	<script src="dist/js/script.js"></script>
+	<script src="dist/js/data.js"></script>
 </body>
 
 </html>

@@ -26,21 +26,33 @@
 
 	<div class="bg-[#FAFAFA] border-2 border-b-[#cacaca]">
 
-		<nav class="mt-5 flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto">
-
-			<!-- right nav items -->
-			<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
-				<a href="index.html">
-					<img src="dist/img/logo.png" alt="virgool-logo" loading="lazy">
-				</a>
-				<a href="index.html">ویرگول چیست</a>
-			</div>
-
-			<!-- left nav items -->
-			<div x-data class="space-x-4 mx-auto xs:mx-[initial]">
-				<i class="fas fa-search secondary-text text-lg ml-4 align-middle cursor-pointer" id="search-btn"></i>
-				<a href="#" @click="alert('Not Implemented Yet')" class="secondary-color">ورود</a>
-				<a href="#" @click="alert('Not Implemented Yet')" class="register-btn">ثبت نام</a>
+		<nav class="w-full bg-white px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
+			<div class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto"
+				x-data="search">
+	
+				<!-- right nav items -->
+				<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
+					<a href="index.html">
+						<img src="dist/img/logo.png" alt="virgool-logo" loading="lazy">
+					</a>
+					<a href="index.html">ویرگول چیست</a>
+				</div>
+	
+				<!-- left nav items -->
+				<div class="space-x-4 mx-auto xs:mx-[initial]">
+					<i class="fas fa-search search-btn" @click="toggle"></i>
+					<a href="#" @click="alert('Not Implemented Yet')" class="secondary-color">ورود</a>
+					<a href="#" @click="alert('Not Implemented Yet')" class="register-btn">ثبت نام</a>
+				</div>
+	
+				<!-- search section -->
+				<div class="search-bar" x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
+					<form class="w-full">
+						<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
+						 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
+					</form>
+					<span class="text-[#323232] cursor-pointer" @click="toggle()">X</span>
+				</div>
 			</div>
 		</nav>
 

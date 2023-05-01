@@ -663,6 +663,38 @@ figcaption{
   color: #00000070;
 }
 
+.search-btn{
+  --tw-text-opacity: 1;
+  color: rgb(142 142 142 / var(--tw-text-opacity));
+  margin-left: 1rem;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.search-bar{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 2rem;
+}
+
+@media (min-width: 1024px){
+  .search-bar{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+  }
+}
+
 .absolute{
   position: absolute;
 }
@@ -1597,6 +1629,14 @@ figcaption{
 
 .outline-0{
   outline-width: 0px;
+}
+
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 input::-webkit-search-cancel-button {

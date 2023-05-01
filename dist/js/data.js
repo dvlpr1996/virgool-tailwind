@@ -57,4 +57,11 @@ document.addEventListener('alpine:init', () => {
       return 'dist/img/bg-' + (Math.floor(Math.random() * 3) + 2) + '.jpg';
     }
   }));
+
+  Alpine.data('search', () => ({
+    open: false,
+    toggle() {
+      this.open = !this.open;
+    },
+  }));
 });

@@ -24,10 +24,9 @@
 
 <body class="font-normal text-base">
 
-	<!-- nav bar -->
-	<div class="w-full bg-white px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
-		<!-- top nav bar -->
-		<nav class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto">
+	<nav class="w-full bg-white px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
+		<div class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto"
+			x-data="search">
 
 			<!-- right nav items -->
 			<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
@@ -38,24 +37,22 @@
 			</div>
 
 			<!-- left nav items -->
-			<div x-data class="space-x-4 mx-auto xs:mx-[initial]">
-				<i class="fas fa-search secondary-text text-lg ml-4 align-middle cursor-pointer" id="search-btn"></i>
+			<div class="space-x-4 mx-auto xs:mx-[initial]">
+				<i class="fas fa-search search-btn" @click="toggle"></i>
 				<a href="#" @click="alert('Not Implemented Yet')" class="secondary-color">ورود</a>
 				<a href="#" @click="alert('Not Implemented Yet')" class="register-btn">ثبت نام</a>
 			</div>
-		</nav>
-		<!-- /top nav bar -->
 
-		<!-- search section -->
-		<div class="flex justify-between items-center w-full lg:w-[960px] absolute top-0 right-0 left-0
-		     lg:mx-auto bg-white p-8 animate__animated animate__backInDown" id="search-bar">
-			<form class="w-full">
-				<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
-				 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
-			</form>
-			<span class="text-[#323232] cursor-pointer" id="close-btn">X</span>
+			<!-- search section -->
+			<div class="search-bar" x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
+				<form class="w-full">
+					<input type="search" class="w-full border-0 outline-0 focus-visible:outline-0 focus-visible:outline-hidden
+					 text-[#323232]" placeholder="در بین مقالات، نویسندگان و… جستجو کنید">
+				</form>
+				<span class="text-[#323232] cursor-pointer" @click="toggle()">X</span>
+			</div>
 		</div>
-	</div>
+	</nav>
 
 	<div class="w-full sm:w-[550px] md:w-[710px] sm:mx-auto mt-11 px-4" x-data="postsInfo">
 

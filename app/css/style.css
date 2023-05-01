@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-['Vazir'] scroll-smooth;
+  }
+
+  body {
+    @apply bg-[#F5F5F5];
+  }
+
+  figcaption {
+    @apply text-center font-extralight my-3 leading-6 text-[#4b4b4b] block;
+  }
+}
+
+@layer components {
+  .secondary-text {
+    @apply text-[#8E8E8E];
+  }
+
+  .secondary-bg-color {
+    @apply bg-[#107ABE];
+  }
+
+  .secondary-color {
+    @apply text-[#107ABE];
+  }
+
+  .avatar {
+    @apply w-12 h-12 rounded-full object-cover;
+  }
+
+  .post-container {
+    @apply bg-white space-y-5 px-5 py-3 shadow-md mb-5;
+  }
+
+  .post-img {
+    @apply w-full h-52 object-fill;
+  }
+
+  .post-title {
+    @apply secondary-text overflow-hidden whitespace-nowrap overflow-ellipsis w-3/5 text-sm;
+  }
+
+  .heart-icon {
+    @apply align-middle secondary-text hover:text-[#e2264d];
+  }
+
+  .counter {
+    @apply inline-block text-[11.52px] text-[#6e6e6e] align-middle;
+  }
+
+  .btn {
+    @apply inline-block align-middle select-none border-none secondary-bg-color
+  }
+
+  .register-btn {
+    @apply px-[25px] py-[5px]  rounded-[5px] text-[#ffffffD6] secondary-bg-color btn;
+  }
+
+  .footer-link {
+    @apply inline-block text-[12.8px] text-[#00000070];
+  }
+
+  .search-btn {
+    @apply secondary-text text-lg ml-4 align-middle cursor-pointer;
+  }
+
+  .search-bar {
+    @apply flex justify-between items-center w-full lg:w-[960px] absolute top-0 right-0 left-0
+    lg:mx-auto bg-white p-8;
+  }
+
+}
+
+input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.img-hover::before {
+  background-color: rgba(0, 0, 0, .3);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.before::before {
+  position: absolute;
+  content: "";
+  right: calc(50% - 180px);
+  top: -10px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #ddd transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}

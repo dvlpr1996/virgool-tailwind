@@ -29,7 +29,7 @@
 		<nav class="w-full bg-white px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
 			<div class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto"
 				x-data="search">
-	
+
 				<!-- right nav items -->
 				<div class="flex flex-row items-center gap-3 justify-center xs:justify-[unset]">
 					<a href="index.html">
@@ -37,14 +37,14 @@
 					</a>
 					<a href="index.html">ویرگول چیست</a>
 				</div>
-	
+
 				<!-- left nav items -->
 				<div class="space-x-4 mx-auto xs:mx-[initial]">
 					<i class="fas fa-search search-btn" @click="toggle"></i>
 					<a href="#" @click="alert('Not Implemented Yet')" class="secondary-color">ورود</a>
 					<a href="#" @click="alert('Not Implemented Yet')" class="register-btn">ثبت نام</a>
 				</div>
-	
+
 				<!-- search section -->
 				<div class="search-bar" x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
 					<form class="w-full">
@@ -75,7 +75,7 @@
 			rounded-full cursor-pointer text-sm font-bold py-1 text-center px-4 w-2/3 max-w-[200px]">دنبال کنید</button>
 
 				<div>
-					<div class="inline-flex space-x-2">
+					<div class="flex justify-center gap-2 items-center">
 						<a href="#"
 							class="flex flex-row justify-center items-center w-8 h-8 text-center border rounded-full text-white bg-[#6e6e6e]">
 							<i class="fa fa-rss"></i>

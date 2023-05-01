@@ -715,16 +715,8 @@ figcaption{
   bottom: 2rem;
 }
 
-.left-0{
-  left: 0px;
-}
-
 .left-5{
   left: 1.25rem;
-}
-
-.right-0{
-  right: 0px;
 }
 
 .right-7{
@@ -929,10 +921,6 @@ figcaption{
   margin-top: 1rem;
 }
 
-.mt-5{
-  margin-top: 1.25rem;
-}
-
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -955,10 +943,6 @@ figcaption{
 
 .flex{
   display: flex;
-}
-
-.inline-flex{
-  display: inline-flex;
 }
 
 .grid{
@@ -1353,10 +1337,6 @@ figcaption{
   padding: 1rem;
 }
 
-.p-8{
-  padding: 2rem;
-}
-
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -1631,14 +1611,6 @@ figcaption{
   outline-width: 0px;
 }
 
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
@@ -1663,6 +1635,11 @@ input::-webkit-search-cancel-button {
   border-color: transparent transparent #ddd transparent;
   transition-duration: 0.3s;
   transition-property: transform;
+}
+
+.hover\:secondary-bg-color:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 122 190 / var(--tw-bg-opacity));
 }
 
 .hover\:cursor-pointer:hover{

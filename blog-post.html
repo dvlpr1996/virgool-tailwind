@@ -24,6 +24,7 @@
 
 <body class="font-normal text-base">
 
+	<!-- nav bar -->
 	<nav class="w-full bg-white px-1 py-4 md:px-8 md:py-8 text-[13.3333px] relative">
 		<div class="flex flex-col gap-5 xs:gap-0 xs:flex-row xs:justify-between xs:items-center lg:w-[960px] lg:mx-auto"
 			x-data="search">
@@ -54,113 +55,116 @@
 		</div>
 	</nav>
 
-	<main class="mt-10 p-4 bg-white w-full md:w-[750px] md:mx-auto">
+	<div class="mt-10 p-4 bg-white w-full md:w-[750px] md:mx-auto">
 
-		<div class="flex items-center justify-start gap-5 sm:gap-2 flex-col xs:flex-row">
-			<img src="dist/img/avatar-3.png" class="w-20 h-w-20 rounded-full object-cover" alt="writer-post-blog"
-				loading="lazy">
-			<div class="space-y-4 sm:space-y-1">
-				<div class="flex gap-3 items-center flex-col sm:flex-row">
-					<a href="writer.html" class="text-[#323232] font-bold text-xl">نام نویسنده</a>
-					<a href="#" class="bg-[#4b4b4b] text-white min-w-[7rem] rounded-full text-center text-[.75rem] py-1 px-2">+
-						دنبال کنید</a>
+		<!-- post section -->
+		<main>
+			<div class="flex items-center justify-start gap-5 sm:gap-2 flex-col xs:flex-row">
+				<img src="dist/img/avatar-3.png" class="w-20 h-w-20 rounded-full object-cover" alt="writer-post-blog"
+					loading="lazy">
+				<div class="space-y-4 sm:space-y-1">
+					<div class="flex gap-3 items-center flex-col sm:flex-row">
+						<a href="writer.html" class="text-[#323232] font-bold text-xl">نام نویسنده</a>
+						<a href="#" class="bg-[#4b4b4b] text-white min-w-[7rem] rounded-full text-center text-[.75rem] py-1 px-2">+
+							دنبال کنید</a>
+					</div>
+					<p class="text-[11.52px] text-[#4b4b4b]">
+						<span>دو سال پیش</span> / <span>خواندن ۲ دقیقه</span>
+					</p>
 				</div>
-				<p class="text-[11.52px] text-[#4b4b4b]">
-					<span>دو سال پیش</span> / <span>خواندن ۲ دقیقه</span>
-				</p>
 			</div>
-		</div>
 
-		<!-- post content -->
-		<div x-data="postText">
-			<h1 class="text-[#4b4b4b] text-2xl font-bold mt-10 mb-4">عنوان مقاله</h1>
+			<!-- post content -->
+			<div x-data="postText">
+				<h1 class="text-[#4b4b4b] text-2xl font-bold mt-10 mb-4">عنوان مقاله</h1>
 
-			<figure class="my-4">
-				<img src="dist/img/bg-3.jpg" class="w-full h-auto" alt="..." loading="lazy">
-				<figcaption>توضیحی در مورد عکس بالا</figcaption>
-			</figure>
+				<figure class="my-4">
+					<img src="dist/img/bg-3.jpg" class="w-full h-auto" alt="..." loading="lazy">
+					<figcaption>توضیحی در مورد عکس بالا</figcaption>
+				</figure>
 
-			<p class="leading-10" x-text="text"></p>
+				<p class="leading-10" x-text="text"></p>
 
-			<figure class="my-4">
-				<img src="dist/img/bg-4.jpg" class="w-full h-auto" alt="..." loading="lazy">
-				<figcaption>توضیحی در مورد عکس بالا</figcaption>
-			</figure>
+				<figure class="my-4">
+					<img src="dist/img/bg-4.jpg" class="w-full h-auto" alt="..." loading="lazy">
+					<figcaption>توضیحی در مورد عکس بالا</figcaption>
+				</figure>
 
-			<p class="leading-10" x-text="text"></p>
-		</div>
+				<p class="leading-10" x-text="text"></p>
+			</div>
 
-		<!-- post tags -->
-		<div class="mt-10 sm:mt-24 text-center sm:text-right">
-			<ul x-data>
-				<template x-for="i in 4">
-					<li class="inline-block whitespace-nowrap ml-2 mb-4 text-sm">
-						<a href="#" class="py-1 px-3 text-[#323232] bg-[#f5f5f5] hover:text-[#eaeaea]">تک مقاله</a>
-					</li>
-				</template>
-			</ul>
-		</div>
+			<!-- post tags -->
+			<div class="mt-10 sm:mt-24 text-center sm:text-right">
+				<ul x-data>
+					<template x-for="i in 4">
+						<li class="inline-block whitespace-nowrap ml-2 mb-4 text-sm">
+							<a href="#" class="py-1 px-3 text-[#323232] bg-[#f5f5f5] hover:text-[#eaeaea]">تک مقاله</a>
+						</li>
+					</template>
+				</ul>
+			</div>
 
-		<div class="mt-7 flex flex-col gap-7 sm:flex-row items-center justify-center sm:justify-between">
+			<div class="mt-7 flex flex-col gap-7 sm:flex-row items-center justify-center sm:justify-between">
 
-			<div class="flex items-center gap-7">
+				<div class="flex items-center gap-7">
 
-				<div>
+					<div>
+						<a href="#" class="inline-block">
+							<i class="fa-lg far fa-heart heart-icon"></i>
+						</a>
+						<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">۵۲</a>
+					</div>
+
+					<div>
+						<a href="#" class="inline-block">
+							<i class="far fa-comment-alt fa-lg align-middle secondary-text"></i>
+						</a>
+						<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">۶</a>
+					</div>
+
 					<a href="#" class="inline-block">
-						<i class="fa-lg far fa-heart heart-icon"></i>
+						<i class="fa-lg align-middle secondary-text far fa-bookmark"></i>
 					</a>
-					<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">۵۲</a>
+
 				</div>
 
-				<div>
-					<a href="#" class="inline-block">
-						<i class="far fa-comment-alt fa-lg align-middle secondary-text"></i>
-					</a>
-					<a href="#" class="inline-block text-[11.52px] text-[#6e6e6e] align-middle">۶</a>
-				</div>
+				<div class="flex flex-col sm:flex-row items-center gap-4">
 
-				<a href="#" class="inline-block">
-					<i class="fa-lg align-middle secondary-text far fa-bookmark"></i>
-				</a>
+					<div>
+						<a href="#" class="ml-2">
+							<i class="fab fa-telegram fa-lg secondary-text"></i>
+						</a>
+
+						<a href="#" class="ml-2">
+							<i class="fab fa-twitter fa-lg secondary-text"></i>
+						</a>
+					</div>
+
+					<a href="#" class="text-base text-[#6e6e6e] py-1 px-5 border border-[#6e6e6e] rounded-full">
+						https://vrgl.ir/abc
+						<i class="far fa-copy"></i>
+					</a>
+
+				</div>
 
 			</div>
 
-			<div class="flex flex-col sm:flex-row items-center gap-4">
+			<hr class="border-b-4 border-dotted my-8">
 
-				<div>
-					<a href="#" class="ml-2">
-						<i class="fab fa-telegram fa-lg secondary-text"></i>
-					</a>
-
-					<a href="#" class="ml-2">
-						<i class="fab fa-twitter fa-lg secondary-text"></i>
+			<div>
+				<div class="flex items-center flex-col xs:flex-row gap-3 xs:gap-1">
+					<img src="dist/img/avatar-3.png" class="w-14 h-14 rounded-lg" alt="..." loading="lazy">
+					<p class="text-[#323232] font-bold ml-4 mr-2 text-base">نام نویسنده</p>
+					<a href="#" class="secondary-bg-color py-1 px-3 text-xs rounded-md
+				border border-solid border-[#107abe] align-middle">
+						دنبال کردن
 					</a>
 				</div>
-
-				<a href="#" class="text-base text-[#6e6e6e] py-1 px-5 border border-[#6e6e6e] rounded-full">
-					https://vrgl.ir/abc
-					<i class="far fa-copy"></i>
-				</a>
-
 			</div>
+		</main>
 
-		</div>
-
-		<hr class="border-b-4 border-dotted my-8">
-
-		<div>
-			<div class="flex items-center flex-col xs:flex-row gap-3 xs:gap-1">
-				<img src="dist/img/avatar-3.png" class="w-14 h-14 rounded-lg" alt="..." loading="lazy">
-				<p class="text-[#323232] font-bold ml-4 mr-2 text-base">نام نویسنده</p>
-				<a href="#" class="secondary-bg-color py-1 px-3 text-xs rounded-md
-					border border-solid border-[#107abe] align-middle">
-					دنبال کردن
-				</a>
-			</div>
-		</div>
-
-
-		<div class="hidden w-52 xl:fixed xl:block left-5 space-y-3 top-[150px]" id="sidebar">
+		<!-- side bar -->
+		<div class="hidden w-52 xl:fixed xl:block left-5 space-y-3 top-[150px]" id="side-bar">
 			<h2 class="font-bold text-sm text-[#323232]">نام نویسنده</h2>
 			<p class="text-xs text-[#6e6e6e]">
 				ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
@@ -191,10 +195,10 @@
 
 			</div>
 		</div>
-	</main>
+	</div>
 
 	<div class="bg-[#F5F5F5] px-4 mt-20 pb-5">
-
+		<!-- similar post section -->
 		<div class="mx-auto pt-10 sm:pt-28 w-full md:w-[760px] lg:w-[960px]">
 			<h5 class="mb-4 font-bold text-sm text-[#6e6e6e]">شاید از این نوشته‌ها هم خوشتان بیاید</h5>
 
@@ -246,8 +250,7 @@
 							<img :src="comment.avatar" class="w-full h-full rounded-full" alt="..." loading="lazy">
 						</div>
 						<div>
-							<a href="writer.html" x-text="comment.author"
-								class="secondary-color overflow-ellipsis text-[12.8px]"></a>
+							<a href="writer.html" x-text="comment.author" class="secondary-color overflow-ellipsis text-[12.8px]"></a>
 							<p class="text-[#6e6e6e] text-[10.24px]">خواندن در ۷ دقیقه</p>
 						</div>
 					</div>
@@ -269,12 +272,9 @@
 			</template>
 
 		</div>
-
 	</div>
 
-	<script src="dist/js/jquery.min.js"></script>
 	<script src="dist/js/script.js"></script>
-	<script src="dist/js/data.js"></script>
 </body>
 
 </html>
